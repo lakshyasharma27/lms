@@ -23,7 +23,7 @@
     pip install -r requirements/development.txt (install packages for development purpose)
     </li>
     <li>
-    pip install -r requirements/development.txt (install packages for production purpose)
+    pip install -r requirements/production.txt (install packages for production purpose)
     </li>    
 </ol>
 <hr>

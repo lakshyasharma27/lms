@@ -169,4 +169,7 @@ docker-compose.yml
 
 #environment
 config/
+
+#visual code settings
+.vscode
 # End of https://www.toptal.com/developers/gitignore/api/django

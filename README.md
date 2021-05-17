@@ -10,7 +10,7 @@
 
 <h3>Clone the project</h3>
 <ol>
-    <li>git clone git@github.com:lakshyasharma27/sms.git</li>
+    <li>git clone git@github.com:lakshyasharma27/lms.git</li>
 </ol>
 <hr>
 
@@ -19,11 +19,33 @@
     <li>
     pip freeze > requirements.txt (To add libraries) 
     </li>
-    <li>pip install -r requirements.txt (install packages from requirement.txt)
+    <li>
+    pip install -r requirements/development.txt (install packages for development purpose)
+    </li>
+    <li>
+    pip install -r requirements/development.txt (install packages for production purpose)
     </li>    
 </ol>
 <hr>
 
+<h3>Migrations steps</h3>
+<ol>
+    <li>
+    python manage.py makemigrations
+    </li>
+    <li>
+    python manage.py migrate
+    </li>    
+</ol>
+<hr>
+
+<h3>Locally run server with development settings</h3>
+<ol>
+    <li>
+    python manage.py runserver --settings=mysite.settings.development
+    </li>
+</ol>
+<hr>
 
 
 

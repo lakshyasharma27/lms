@@ -29,6 +29,7 @@
 <hr>
 
 <h3>Migrations steps</h3>
+<p>For migrations and running the server trace to manage.py path</p>
 <ol>
     <li>
     python manage.py makemigrations
@@ -39,7 +40,20 @@
 </ol>
 <hr>
 
-<h3>Locally run server with development settings</h3>
+<h3>To Temporarily set environment variables</h3>
+<ol>
+    <li>
+    export $(cat ../config/.env.prod | xargs) [For prodiction variables]
+    </li>
+    <li>
+    export $(cat ../config/.env.dev | xargs) [For development variables]
+    </li>    
+</ol>
+<hr>
+
+
+
+<h3>Locally run server with development or production settings</h3>
 <ol>
     <li>
     python manage.py runserver --settings=mysite.settings.development
@@ -48,6 +62,20 @@
     python manage.py runserver --settings=mysite.settings.production (Need prod env variables)
     </li>    
 </ol>
+<hr>
+
+<h3>Create Image and run the created image</h3>
+<ol>
+    <li>
+        sudo docker-compose --env-file ./config/.env.dev build ( create the image with dev env variables)
+    </li>
+    <li>
+    sudo docker-compose --env-file ./config/.env.dev up -d ( create the image with dev env variables)
+    </li>    
+</ol>
+<p>
+After running the container create an image and push that an image to docker hub
+</p>
 <hr>
 
 

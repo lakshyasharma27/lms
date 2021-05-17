@@ -44,6 +44,9 @@
     <li>
     python manage.py runserver --settings=mysite.settings.development
     </li>
+    <li>
+    python manage.py runserver --settings=mysite.settings.production (Need prod env variables)
+    </li>    
 </ol>
 <hr>
 

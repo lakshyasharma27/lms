@@ -79,4 +79,54 @@ After running the container create an image and push that an image to docker hub
 <hr>
 
 
+<h1> Setting up Project Locally </h1>
 
+<h3>Setup Postgres to run project locally (UBUNTU)</h3>
+<ol>
+    <li>
+        sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-contrib
+    </li>
+    <li>
+        sudo su - postgres
+    </li>    
+    <li>
+        psql
+    </li>    
+    <li>
+        CREATE DATABASE leavemanagementsystem;
+    </li>    
+    <li>
+        CREATE USER lms WITH PASSWORD 'G0tMeB@ck';
+    </li> 
+    <li>
+        ALTER ROLE lms SET client_encoding TO 'utf8';
+        ALTER ROLE lms SET default_transaction_isolation TO 'read committed';
+        ALTER ROLE lms SET timezone TO 'UTC';
+    </li> 
+    <li>
+        GRANT ALL PRIVILEGES ON DATABASE leavemanagementsystem TO lms;
+    </li> 
+    <li>
+        \q
+    </li> 
+    <li>
+        exit        
+    </li>           
+</ol>
+<p>
+After running the container create an image and push that an image to docker hub
+</p>
+
+<h3>To Temporarily set environment variables</h3>
+<ol>
+    <li>
+    export $(cat ../config/.env.local | xargs) [For local variables]
+    </li>   
+</ol>
+
+<h3>Locally run server</h3>
+<ol>
+    <li>
+    python manage.py runserver --settings=mysite.settings.development
+    </li>
+</ol>

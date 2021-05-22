@@ -78,8 +78,17 @@ After running the container create an image and push that an image to docker hub
 </p>
 <hr>
 
+<h1> Run Project In Production using Docker </h1>
 
-<h1> Setting up Project Locally </h1>
+<hr>
+<hr>
+
+<h1> Run Project Locally using Docker </h1>
+
+<hr>
+<hr>
+
+<h1> Set up and run Project Locally </h1>
 
 <h3>Setup Postgres to run project locally (UBUNTU)</h3>
 <ol>
@@ -96,7 +105,7 @@ After running the container create an image and push that an image to docker hub
         CREATE DATABASE leavemanagementsystem;
     </li>    
     <li>
-        CREATE USER lms WITH PASSWORD 'G0tMeB@ck';
+        CREATE USER lms WITH PASSWORD 'lms@123';
     </li> 
     <li>
         ALTER ROLE lms SET client_encoding TO 'utf8';
@@ -117,12 +126,6 @@ After running the container create an image and push that an image to docker hub
 After running the container create an image and push that an image to docker hub
 </p>
 
-<h3>To Temporarily set environment variables</h3>
-<ol>
-    <li>
-    export $(cat ../config/.env.local | xargs) [For local variables]
-    </li>   
-</ol>
 
 <h3>Locally run server</h3>
 <ol>
@@ -130,3 +133,5 @@ After running the container create an image and push that an image to docker hub
     python manage.py runserver --settings=mysite.settings.development
     </li>
 </ol>
+<hr>
+<hr>

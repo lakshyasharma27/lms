@@ -109,7 +109,11 @@ After running the container create an image and push that an image to docker hub
     </li> 
     <li>
         ALTER ROLE lms SET client_encoding TO 'utf8';
+    </li>
+    <li>
         ALTER ROLE lms SET default_transaction_isolation TO 'read committed';
+    </li>
+    <li>
         ALTER ROLE lms SET timezone TO 'UTC';
     </li> 
     <li>

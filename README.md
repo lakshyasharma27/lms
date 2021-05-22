@@ -122,9 +122,26 @@ After running the container create an image and push that an image to docker hub
         exit        
     </li>           
 </ol>
-<p>
-After running the container create an image and push that an image to docker hub
-</p>
+
+<h3>Create Virtual Environment</h3>
+<ol>
+    <li>python3 -m pip install --user virtualenv (if not installed)</li>
+    <li>python3 -m venv venv</li>
+    <li>source venv/bin/activate (to activate)</li>
+    <li>deactivate (to deactivate)</li>
+</ol>
+
+<h3>Clone the project</h3>
+<ol>
+    <li>git clone git@github.com:lakshyasharma27/lms.git</li>
+</ol>
+
+<h3>Installed Python libraries</h3>
+<ol>
+    <li>
+    pip install -r requirements/development.txt (install packages for development purpose)
+    </li>
+</ol>
 
 <h3>Migrations steps</h3>
 <p>For running migrations trace to manage.py path</p>
@@ -136,7 +153,6 @@ After running the container create an image and push that an image to docker hub
     python manage.py migrate
     </li>    
 </ol>
-
 
 <h3>Locally run server</h3>
 <p>For running server trace to manage.py path</p>

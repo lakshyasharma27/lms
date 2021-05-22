@@ -126,8 +126,20 @@ After running the container create an image and push that an image to docker hub
 After running the container create an image and push that an image to docker hub
 </p>
 
+<h3>Migrations steps</h3>
+<p>For running migrations trace to manage.py path</p>
+<ol>
+    <li>
+    python manage.py makemigrations
+    </li>
+    <li>
+    python manage.py migrate
+    </li>    
+</ol>
+
 
 <h3>Locally run server</h3>
+<p>For running server trace to manage.py path</p>
 <ol>
     <li>
     python manage.py runserver --settings=mysite.settings.development
